@@ -1,4 +1,4 @@
-	package com.lti.dao;
+package com.lti.dao;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -6,8 +6,8 @@ import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 import org.springframework.stereotype.Repository;
-import com.lti.beans.Admin;
-import com.lti.beans.LoanApplication;
+import com.lti.beans.entity.Admin;
+import com.lti.beans.entity.LoanApplication;
 import com.lti.excep.LoanApplicationException;
 
 
@@ -103,5 +103,14 @@ public class AdminDaoImplementation implements AdminDao {
 		return a;
 	 }
 	
+	@Override
+	@Transactional
+	public LoanApplication findApplicationByEmailId(String email) throws LoanApplicationException 
+	 {	
+		TypedQuery<LoanApplication> qry = entitymanager.createQuery("Select a from LoanApplication a join a.user u where u.email=:email", LoanApplication.class);
+		qry.setParameter("email", email);
+		LoanApplication a = (LoanApplication)qry.getSingleResult();
+		return a;
+	 }
+	
 }
-

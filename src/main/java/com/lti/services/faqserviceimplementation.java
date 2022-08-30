@@ -5,11 +5,12 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.lti.beans.faq;
+
+import com.lti.beans.entity.faq;
 import com.lti.dao.faqDAO;
 
 @Service("aboutusser")
-public class faqserviceimplementation implements faqservice{
+public class faqserviceimplementation implements faqDAO{
 	
 	@Autowired
 	public faqDAO faqdao;

@@ -2,8 +2,8 @@ package com.lti.dao;
 
 
 import java.util.List;
-import com.lti.beans.Admin;
-import com.lti.beans.LoanApplication;
+import com.lti.beans.entity.Admin;
+import com.lti.beans.entity.LoanApplication;
 import com.lti.excep.LoanApplicationException;
 
 
@@ -17,5 +17,6 @@ public interface AdminDao {
 	List<LoanApplication> getAllApplications();
 	boolean updatestatus(int applicationId, String status) throws LoanApplicationException;
 	LoanApplication findApplicationByUserId(int userId) throws LoanApplicationException;
+	LoanApplication findApplicationByEmailId(String email) throws LoanApplicationException;
 	
 }

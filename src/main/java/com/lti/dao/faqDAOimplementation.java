@@ -8,8 +8,8 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
-import com.lti.beans.LoanApplication;
-import com.lti.beans.faq;
+import com.lti.beans.entity.LoanApplication;
+import com.lti.beans.entity.faq;
 
 @Repository("aboutusdao")
 public class faqDAOimplementation implements faqDAO{

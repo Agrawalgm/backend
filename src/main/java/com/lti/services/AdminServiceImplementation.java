@@ -6,8 +6,8 @@ import java.util.List;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.lti.beans.Admin;
-import com.lti.beans.LoanApplication;
+import com.lti.beans.entity.Admin;
+import com.lti.beans.entity.LoanApplication;
 import com.lti.dao.AdminDao;
 import com.lti.excep.LoanApplicationException;
 
@@ -60,5 +60,10 @@ public class AdminServiceImplementation implements AdminService {
 	public LoanApplication findApplicationByUserId(int userId) throws LoanApplicationException 
 	{
 		return admindao.findApplicationByUserId(userId);
+	}
+
+	public LoanApplication findApplicationByEmailId(String email) throws LoanApplicationException {
+		// TODO Auto-generated method stub
+		return admindao.findApplicationByEmailId(email);
 	}	
 }

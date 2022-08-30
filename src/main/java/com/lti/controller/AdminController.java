@@ -1,5 +1,4 @@
-	package com.lti.controller;
-
+package com.lti.controller;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -10,8 +9,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.lti.beans.Admin;
-import com.lti.beans.LoanApplication;
+import com.lti.beans.entity.Admin;
+import com.lti.beans.entity.LoanApplication;
 import com.lti.excep.LoanApplicationException;
 import com.lti.services.AdminServiceImplementation;
 
@@ -82,7 +81,14 @@ public class AdminController {
 		System.out.println(application);
 	    return application;
 	}
-}
 	
-
-
+	//Function will be used to return the application data with user id.
+		@GetMapping(path = "/get-application-by-email/{email}")
+		public LoanApplication findApplicationByEmailId(@PathVariable("email") String email) throws LoanApplicationException 
+		{
+			System.out.println(email+"controller");
+			LoanApplication application = adminsint.findApplicationByEmailId(email);
+			System.out.println(application);
+		    return application;
+		}
+}

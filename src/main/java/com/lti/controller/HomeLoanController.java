@@ -10,15 +10,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.lti.beans.IncomeSalaried;
-import com.lti.beans.IncomeSelfEmployed;
-import com.lti.beans.LoanApplication;
-import com.lti.beans.Property;
-import com.lti.beans.User;
-import com.lti.dto.IncomeSalariedDTO;
-import com.lti.dto.IncomeSelfEmployedDTO;
-import com.lti.dto.LoanApplicationDTO;
-import com.lti.dto.PropertyDTO;
+
+import com.lti.beans.entity.IncomeSalaried;
+import com.lti.beans.entity.IncomeSelfEmployed;
+import com.lti.beans.entity.LoanApplication;
+import com.lti.beans.entity.Property;
+import com.lti.beans.entity.User;
+import com.lti.model.IncomeSalariedDTO;
+import com.lti.model.IncomeSelfEmployedDTO;
+import com.lti.model.LoanApplicationDTO;
+import com.lti.model.PropertyDTO;
 import com.lti.services.HomeLoanService;
 
 @CrossOrigin(origins="*")

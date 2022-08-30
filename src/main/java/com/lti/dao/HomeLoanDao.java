@@ -1,14 +1,13 @@
 package com.lti.dao;
 
 
-import com.lti.beans.LoanApplication;
-
 import java.util.List;
 
-import com.lti.beans.IncomeSalaried;
-import com.lti.beans.IncomeSelfEmployed;
-import com.lti.beans.Property;
-import com.lti.beans.User;
+import com.lti.beans.entity.IncomeSalaried;
+import com.lti.beans.entity.IncomeSelfEmployed;
+import com.lti.beans.entity.LoanApplication;
+import com.lti.beans.entity.Property;
+import com.lti.beans.entity.User;
 
 public interface HomeLoanDao {
 
